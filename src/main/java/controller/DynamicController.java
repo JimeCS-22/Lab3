@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 public class DynamicController {
 
@@ -24,11 +24,11 @@ public class DynamicController {
 
     //Method for Fibonnaci
     public long fibonacci (int n){
-
+return 0;
     }
 
     //Method for Coin change
-    public static int coinChange(int [] coins , int sum){
+    public int coinChange(int [] coins , int sum){
 
         //In case n is 0
         if(sum==0) return 0;

@@ -1,17 +1,19 @@
-package Domain;
+package domain;
+
+import java.util.Arrays;
 
 public class Vector implements VectorInterface {
 
     private int n; //tamaño máximo del vector
-    private int data []; //array de elementos tipo enteros
+    private int data[]; //array de elementos tipo enteros
     private int counter;//cantidad de elementos agregados
 
-//Constructor
-    public Vector(int n){
+    //Constructor
+    public Vector(int n) {
 
         this.n = n;
         this.data = new int[n];
-        this.counter = 0 ;
+        this.counter = 0;
     }
 
     public int[] getData() {
@@ -30,7 +32,7 @@ public class Vector implements VectorInterface {
     public void clear() {
 
         this.data = new int[n];
-        this.counter = 0 ;
+        this.counter = 0;
 
     }
 
@@ -51,8 +53,8 @@ public class Vector implements VectorInterface {
     @Override
     public void add(Object element) {
 
-        if(counter<this.data.length) {
-            this.data[counter++] = (int)element;
+        if (counter < this.data.length) {
+            this.data[counter++] = (int) element;
         }
 
     }
@@ -60,15 +62,14 @@ public class Vector implements VectorInterface {
     @Override
     public void add(int index, Object element) {
 
-        if(index < data.length){
+        if (index < data.length) {
 
-            data[index] = (int)element;
+            data[index] = (int) element;
 
-            if(counter <= index)
-                counter = index +1 ;
+            if (counter <= index)
+                counter = index + 1;
 
         }
-
 
 
     }
@@ -90,7 +91,7 @@ public class Vector implements VectorInterface {
     @Override
     public void sort() {
 
-        bubbleSort(this.data , counter);
+        bubbleSort(this.data, counter);
 
     }
 
@@ -107,10 +108,19 @@ public class Vector implements VectorInterface {
     @Override
     public void fill() {
         util.Utility.fill(this.data);
-        this.counter = this.n ;
+        this.counter = this.n;
     }
 
-    static void bubbleSort(int arr[], int n){
+    @Override
+    public String toString() {
+        return "Vector{" +
+                "n=" + n +
+                ", data=" + Arrays.toString(data) +
+                ", counter=" + counter +
+                '}';
+    }
+
+    static void bubbleSort(int arr[], int n) {
         int i, j, temp;
         boolean swapped;
         for (i = 0; i < n - 1; i++) {

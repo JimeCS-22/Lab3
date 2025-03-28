@@ -1,20 +1,27 @@
-package Controller;
+package controller;
 
 
-import Domain.Vector;
+import domain.Vector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 
 public class VectorController {
 
-    @FXML
-    private TextField nTextField;
+
     Alert alert;
     Vector vector;
+
+    @javafx.fxml.FXML
+    private TextField nTextField;
+    @javafx.fxml.FXML
+    private TextArea textArea;
+    @javafx.fxml.FXML
+    private Pane buttonPane;
 
     @javafx.fxml.FXML
     public void initialize(){
@@ -25,7 +32,7 @@ public class VectorController {
 
     }
 
-    @FXML
+    @javafx.fxml.FXML
     void createOnAction(ActionEvent event) {
         try{
 

@@ -1,10 +1,8 @@
 package domain;
 
-import Domain.ArrayMinMax;
-import Domain.DivideAndConquer;
+import domain.ArrayMinMax;
+import domain.DivideAndConquer;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DivideAndConquerTest {
 
