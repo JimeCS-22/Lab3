@@ -45,8 +45,12 @@ public class Vector implements VectorInterface {
 
     @Override
     public boolean contains(Object element) {
-
-        return false;
+        for (int i = 0; i < counter; i++) {
+            if (data[i] == (int) element) {
+                return true; // Elemento encontrado
+            }
+        }
+        return false; // Elemento no encontrado
 
     }
 
@@ -76,15 +80,32 @@ public class Vector implements VectorInterface {
 
     @Override
     public boolean remove(Object element) {
-
-        return false;
-
+        for (int i = 0; i < counter; i++) {
+            if (data[i] == (int) element) {
+                // Elimina el elemento desplazando el resto de los elementos a la izquierda
+                for (int j = i; j < counter - 1; j++) {
+                    data[j] = data[j + 1];
+                }
+                data[--counter] = 0; // Ajustamos el tamaño y establecemos el último elemento como 0
+                return true; // Elemento eliminado con éxito
+            }
+        }
+        return false; // Elemento no encontrado
     }
 
     @Override
     public Object remove(int index) {
+        if (index >= 0 && index < counter) {
+            int removedElement = data[index];
 
-        return null;
+            // Desplazar los elementos hacia la izquierda
+            for (int i = index; i < counter - 1; i++) {
+                data[i] = data[i + 1];
+            }
+            data[--counter] = 0; // Ajustar el tamaño y establecer el último elemento como 0
+            return removedElement; // Retorna el elemento eliminado
+        }
+        return -1; // Índice fuera de rango
 
     }
 

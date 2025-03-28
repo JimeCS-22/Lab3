@@ -26,7 +26,7 @@ public class VectorController {
     @javafx.fxml.FXML
     public void initialize(){
 
-        this.alert = util.FXUtility.alert("Vector Algoriyhm" , "");
+        this.alert = util.FXUtility.alert("Vector Algorithm" , "");
         alert.setAlertType(Alert.AlertType.ERROR);
 
 
@@ -41,13 +41,13 @@ public class VectorController {
                 this.vector = new Vector(n);
                 this.buttonPane.setDisable(false);
 
-                this.textArea.setText("The vector has been created for " + n + "elemnts");
+                this.textArea.setText("The vector has been created for " + n + "elements");
             } else{
 
             }
 
         }catch (Exception ex){
-            alert.setContentText("Error Try again!");
+            alert.setContentText("Error... Try again!");
             alert.show();
         }
 
