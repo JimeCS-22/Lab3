@@ -52,12 +52,12 @@ public class Utility {
 
     public static String show(int[] a) {
 
-        String result = "";
+        String result = " ";
 
         for(int item : a){
 
             if(item == 0) break;
-            result += item + "";
+            result += item + " ";
         }
 
         return result ;

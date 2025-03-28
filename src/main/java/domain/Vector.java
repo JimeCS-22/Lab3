@@ -118,12 +118,24 @@ public class Vector implements VectorInterface {
 
     @Override
     public int indexOf(Object element) {
-        return 0;
+        for (int i = 0; i < counter; i++) {
+            if (data[i] == (int) element) {
+
+                return i; // Índice del elemento
+
+            }
+        }
+        return -1; // No hay un índice del elemento
     }
 
     @Override
     public Object get(int index) {
-        return null;
+
+        if (index >= 0 && index < counter) {
+            return data[index];
+        }
+
+        return -1; // Índice fuera de rango
     }
 
     @Override
