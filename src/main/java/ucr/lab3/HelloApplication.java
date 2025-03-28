@@ -1,3 +1,4 @@
+
 package ucr.lab3;
 
 import javafx.application.Application;
@@ -22,8 +23,9 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-
     public static void main(String[] args) {
         launch();
     }
+
+
 }

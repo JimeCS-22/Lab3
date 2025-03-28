@@ -8,84 +8,52 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="651.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VectorController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VectorController">
    <children>
-      <Pane layoutX="-1.0" prefHeight="106.0" prefWidth="802.0" style="-fx-background-color: #ef0a37;">
+      <AnchorPane layoutX="-12.0" prefHeight="618.0" prefWidth="834.0">
          <children>
-            <Label layoutX="224.0" layoutY="30.0" text="Vector Algorithmn">
-               <font>
-                  <Font name="Arial" size="40.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutY="106.0" prefHeight="367.0" prefWidth="802.0">
-         <children>
-            <Label layoutX="23.0" layoutY="24.0" text="Vector max size">
+            <Pane layoutX="50.0" layoutY="8.0" prefHeight="95.0" prefWidth="734.0" style="-fx-background-color: #c22b10;">
+               <children>
+                  <Label layoutX="165.0" layoutY="14.0" prefHeight="67.0" prefWidth="405.0" style="-fx-background-color: #c22b10;" text="Vector Algorithm">
+                     <font>
+                        <Font name="Arial Black" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="67.0" layoutY="116.0" prefHeight="51.0" prefWidth="244.0" text="Vector max size:">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="nTextField" layoutX="269.0" layoutY="14.0" prefHeight="53.0" prefWidth="153.0">
+            <Button layoutX="566.0" layoutY="116.0" mnemonicParsing="false" onAction="#createOnAction" prefHeight="58.0" prefWidth="129.0" text="Create">
                <font>
-                  <Font name="Arial" size="25.0" />
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nTextField" layoutX="344.0" layoutY="120.0" prefHeight="58.0" prefWidth="153.0">
+               <font>
+                  <Font size="25.0" />
                </font>
             </TextField>
-            <Button layoutX="498.0" layoutY="15.0" mnemonicParsing="false" onAction="#createOnAction" text="Create">
+            <TextArea fx:id="textArea" editable="false" layoutX="26.0" layoutY="227.0" prefHeight="279.0" prefWidth="806.0">
                <font>
-                  <Font name="Arial" size="25.0" />
-               </font>
-            </Button>
-            <TextArea fx:id="textArea" editable="false" layoutX="16.0" layoutY="75.0" prefHeight="269.0" prefWidth="771.0">
-               <font>
-                  <Font name="Arial" size="25.0" />
+                  <Font name="Arial" size="30.0" />
                </font>
             </TextArea>
+            <Pane fx:id="buttonPane" disable="true" layoutX="14.0" layoutY="508.0" prefHeight="95.0" prefWidth="788.0">
+               <children>
+                  <Button layoutX="55.0" layoutY="4.0" mnemonicParsing="false" text="Fill/Show" />
+                  <Button layoutX="44.0" layoutY="53.0" mnemonicParsing="false" text="Add by value" />
+                  <Button layoutX="258.0" layoutY="4.0" mnemonicParsing="false" text="Add by index" />
+                  <Button layoutX="473.0" layoutY="4.0" mnemonicParsing="false" text="Size" />
+                  <Button layoutX="602.0" layoutY="4.0" mnemonicParsing="false" text="Remove by value" />
+                  <Button layoutX="602.0" layoutY="53.0" mnemonicParsing="false" text="Remove by index" />
+                  <Button layoutX="269.0" layoutY="53.0" mnemonicParsing="false" text="Contains" />
+                  <Button layoutX="470.0" layoutY="53.0" mnemonicParsing="false" text="Clear" />
+               </children>
+            </Pane>
          </children>
-      </Pane>
-      <Pane fx:id="buttonPane" layoutX="21.0" layoutY="460.0" prefHeight="184.0" prefWidth="771.0" visible="false">
-         <children>
-            <Button layoutX="23.0" layoutY="36.0" mnemonicParsing="false" text="FillShow">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="141.0" layoutY="36.0" mnemonicParsing="false" text="Add by value">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="301.0" layoutY="36.0" mnemonicParsing="false" text="Add by vindex">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="462.0" layoutY="36.0" mnemonicParsing="false" text="Size">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="546.0" layoutY="36.0" mnemonicParsing="false" text="Remove by value">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="23.0" layoutY="108.0" mnemonicParsing="false" text="Remove by index">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="221.0" layoutY="108.0" mnemonicParsing="false" text="Contins">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="338.0" layoutY="108.0" mnemonicParsing="false" text="Clear">
-               <font>
-                  <Font name="Arial" size="20.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </AnchorPane>

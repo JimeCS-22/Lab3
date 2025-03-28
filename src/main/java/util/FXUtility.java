@@ -12,7 +12,7 @@ public class FXUtility {
         myalert.setAlertType(Alert.AlertType.ERROR);
         myalert.setTitle("Vector Algorithm");
         myalert.setHeaderText(textHeader);
-        myalert.show();
+        //myalert.show();
         return myalert;
     }
 
