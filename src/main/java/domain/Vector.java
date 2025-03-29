@@ -80,18 +80,27 @@ public class Vector implements VectorInterface {
 
     @Override
     public boolean remove(Object element) {
-        for (int i = 0; i < counter; i++) {
-            if (data[i] == (int) element) {
-                // Elimina el elemento desplazando el resto de los elementos a la izquierda
-                for (int j = i; j < counter - 1; j++) {
-                    data[j] = data[j + 1];
+        if (element instanceof Integer) {
+            int value = (Integer) element;
+            for (int i = 0; i < counter; i++) {
+
+                // Desplazar los elementos hacia la izquierda
+                if (data[i] == value) {
+                    for (int j = i; j < counter - 1; j++) {
+                        data[j] = data[j + 1];
+                    }
+
+                    data[--counter] = 0;// Ajustar el tamaño y establecer el último elemento como 0
+
+
+                    return true;  // Retorna el elemento eliminado por medio de un boolean
                 }
-                data[--counter] = 0; // Ajustamos el tamaño y establecemos el último elemento como 0
-                return true; // Elemento eliminado con éxito
             }
         }
-        return false; // Elemento no encontrado
+        return false;
     }
+
+
 
     @Override
     public Object remove(int index) {
@@ -105,7 +114,7 @@ public class Vector implements VectorInterface {
             data[--counter] = 0; // Ajustar el tamaño y establecer el último elemento como 0
             return removedElement; // Retorna el elemento eliminado
         }
-        return -1; // Índice fuera de rango
+        return -1;
 
     }
 
@@ -146,11 +155,7 @@ public class Vector implements VectorInterface {
 
     @Override
     public String toString() {
-        return "Vector{" +
-                "n=" + n +
-                ", data=" + Arrays.toString(data) +
-                ", counter=" + counter +
-                '}';
+        return "Vector = " + Arrays.toString(data);//Está así para que retorne solo el fill en la parte gráfica
     }
 
     static void bubbleSort(int arr[], int n) {

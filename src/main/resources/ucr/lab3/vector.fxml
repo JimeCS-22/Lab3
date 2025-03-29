@@ -36,21 +36,21 @@
                   <Font size="25.0" />
                </font>
             </TextField>
-            <TextArea fx:id="textArea" editable="false" layoutX="26.0" layoutY="227.0" prefHeight="279.0" prefWidth="806.0">
+            <TextArea fx:id="textArea" editable="false" layoutX="31.0" layoutY="227.0" prefHeight="279.0" prefWidth="801.0">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
             </TextArea>
             <Pane fx:id="buttonPane" disable="true" layoutX="14.0" layoutY="508.0" prefHeight="95.0" prefWidth="788.0">
                <children>
-                  <Button layoutX="55.0" layoutY="4.0" mnemonicParsing="false" text="Fill/Show" />
-                  <Button layoutX="44.0" layoutY="53.0" mnemonicParsing="false" text="Add by value" />
-                  <Button layoutX="258.0" layoutY="4.0" mnemonicParsing="false" text="Add by index" />
-                  <Button layoutX="473.0" layoutY="4.0" mnemonicParsing="false" text="Size" />
-                  <Button layoutX="602.0" layoutY="4.0" mnemonicParsing="false" text="Remove by value" />
-                  <Button layoutX="602.0" layoutY="53.0" mnemonicParsing="false" text="Remove by index" />
-                  <Button layoutX="269.0" layoutY="53.0" mnemonicParsing="false" text="Contains" />
-                  <Button layoutX="470.0" layoutY="53.0" mnemonicParsing="false" text="Clear" />
+                  <Button layoutX="55.0" layoutY="4.0" mnemonicParsing="false" onAction="#FillOnAction" text="Fill/Show" />
+                  <Button layoutX="44.0" layoutY="53.0" mnemonicParsing="false" onAction="#addValueOnAction" text="Add by value" />
+                  <Button layoutX="258.0" layoutY="4.0" mnemonicParsing="false" onAction="#addIndexOnAction" text="Add by index" />
+                  <Button layoutX="473.0" layoutY="4.0" mnemonicParsing="false" onAction="#SizeOnAction" text="Size" />
+                  <Button layoutX="602.0" layoutY="4.0" mnemonicParsing="false" onAction="#removeValueOnAction" text="Remove by value" />
+                  <Button layoutX="602.0" layoutY="53.0" mnemonicParsing="false" onAction="#removeIndexOnAction" text="Remove by index" />
+                  <Button layoutX="269.0" layoutY="53.0" mnemonicParsing="false" onAction="#containsOnAction" text="Contains" />
+                  <Button layoutX="470.0" layoutY="53.0" mnemonicParsing="false" onAction="#ClearOnAction" text="Clear" />
                </children>
             </Pane>
          </children>

@@ -1,10 +1,12 @@
 package domain;
 
+import java.util.Random;
+
 public class DivideAndConquer {
 
 
     //Recursivo
-    public int binarySearchR(int sortedArray[], int value, int low, int high) {
+    public static int binarySearchR(int sortedArray[], int value, int low, int high) {
 
         int mid = (low + high) / 2;
 
@@ -25,7 +27,7 @@ public class DivideAndConquer {
     }
 
     //Iterativo
-    public int binarySearchI(int sortedArray[], int value) {
+    public static int binarySearchI(int sortedArray[], int value) {
         // el espacio de búsqueda es nums[low…high]
         int low = 0;
         int high = sortedArray.length - 1;
@@ -77,6 +79,29 @@ public class DivideAndConquer {
 
         return null;//Se cambia a lo que corresponde
     }
+
+//    // Método de búsqueda aleatoria
+//    public int buscarAleatoriamente() {
+//        Random random = new Random();
+//        // Arreglo de ejemplo
+//        int[] arreglo = {3, 1, 9, 4, 5, 7, 8, 10, 2};
+//        // Valor que queremos buscar
+//        int objetivo = 7;
+//
+//        // Número total de elementos en el arreglo
+//        int n = arreglo.length;
+//
+//        // Continuamos buscando hasta encontrar el objetivo
+//        while (true) {
+//            // Generamos un índice aleatorio
+//            int indiceAleatorio = random.nextInt(n);
+//
+//            // Verificamos si el valor en el índice aleatorio es el que buscamos
+//            if (arreglo[indiceAleatorio] == objetivo) {
+//                return indiceAleatorio; // Si encontramos el valor, devolvemos el índice
+//            }
+//        }
+//    }
 
 
 }

@@ -81,28 +81,7 @@ public class DivideConquer {
     }
 
 
-//    // Método de búsqueda aleatoria
-//    public int buscarAleatoriamente() {
-//        Random random = new Random();
-//        // Arreglo de ejemplo
-//        int[] arreglo = {3, 1, 9, 4, 5, 7, 8, 10, 2};
-//        // Valor que queremos buscar
-//        int objetivo = 7;
-//
-//        // Número total de elementos en el arreglo
-//        int n = arreglo.length;
-//
-//        // Continuamos buscando hasta encontrar el objetivo
-//        while (true) {
-//            // Generamos un índice aleatorio
-//            int indiceAleatorio = random.nextInt(n);
-//
-//            // Verificamos si el valor en el índice aleatorio es el que buscamos
-//            if (arreglo[indiceAleatorio] == objetivo) {
-//                return indiceAleatorio; // Si encontramos el valor, devolvemos el índice
-//            }
-//        }
-//    }
+
 
 }
 
